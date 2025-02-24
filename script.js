@@ -10,10 +10,11 @@ function clearDisplay() {
     document.getElementById('display').value = '';
 }
 
-function deleteLastCharacter() {
-    let display = document.getElementById('display');
-    display.value = display.value.slice(0, -1);
-}
+// Eliminar la función deleteLastCharacter
+// function deleteLastCharacter() {
+//     let display = document.getElementById('display');
+//     display.value = display.value.slice(0, -1);
+// }
 
 function squareRoot() {
     document.getElementById('display').value = Math.sqrt(document.getElementById('display').value);
@@ -25,8 +26,9 @@ document.addEventListener('keydown', function(event) {
         appendToDisplay(key);
     } else if (key === 'Enter') {
         calculate();
-    } else if (key === 'Backspace') {
-        deleteLastCharacter();
+    // Eliminar el evento relacionado con Backspace
+    // } else if (key === 'Backspace') {
+    //     deleteLastCharacter();
     } else if (key === 'Escape') {
         clearDisplay();
     }
